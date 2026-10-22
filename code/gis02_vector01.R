@@ -97,10 +97,12 @@ print(sf_str_as)
 print(sf_nc_county)
 
 ggplot() +
-  geom_sf(data = sf_nc_county) + geom_sf(data =sf_str_as)
+  geom_sf(data = sf_nc_county)+
+  geom_sf(data = sf_str_as)
 
 sf_nc_as <- sf_nc_county %>% 
   filter(county == "ashe")
-ggplot()
-geom_(data = sf_nc_as) +
+
+ggplot()+
+  geom_sf(data = sf_nc_as) +
   geom_sf(data = sf_str_as)
